@@ -1,0 +1,7 @@
+setup.py
+/Users/averydrennan/random_lib/src/c_extension/PCG.c
+/Users/averydrennan/random_lib/src/c_extension/rand_pyext.c
+PackageName.egg-info/PKG-INFO
+PackageName.egg-info/SOURCES.txt
+PackageName.egg-info/dependency_links.txt
+PackageName.egg-info/top_level.txt
