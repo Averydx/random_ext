@@ -9,6 +9,7 @@
 #include "stdlib.h"
 #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 
+
 typedef struct {
     PyObject_HEAD
     uint64_t state;
@@ -95,6 +96,7 @@ PyObject* standard_normal(PCG *self,PyObject *args)
 
 
     double* arr = malloc(size*sizeof(double));
+    Py_BEGIN_ALLOW_THREADS
     for(size_t i = 0;i < size;i+=2)
     {
         double u,v,s;
@@ -118,6 +120,7 @@ PyObject* standard_normal(PCG *self,PyObject *args)
         arr[i+1] = z1;
         }
     }
+    Py_END_ALLOW_THREADS
 
     npy_intp dims[] = {(int)size};
     PyArrayObject* result = PyArray_SimpleNewFromData(1,dims,NPY_DOUBLE,(void*)arr);
