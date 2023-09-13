@@ -8,8 +8,10 @@ module = Extension("Rand",sources = ['/Users/averydrennan/random_lib/src/c_exten
                    extra_link_args=['-lomp']
                    )
 
-setup(name="PackageName",
+setup(name="Rand",
       version="0.0.1",
       description="Module for the computation of random numbers using PCG",
       ext_modules=[module],
-      include_dirs=[np.get_include(),'/opt/homebrew/opt/libomp/include'],)
+      include_dirs=[np.get_include(),'/opt/homebrew/opt/libomp/include'],
+      packages=["."],
+      package_data={'': ['*.so', '*.pyi']})

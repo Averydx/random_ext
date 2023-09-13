@@ -10,9 +10,9 @@ gen2 = np.random.default_rng(5)
 times = []
 for i in range(100):
     t1 = perf_counter()
-    gen.standard_normal(100000000)
+    gen.standard_normal(100000)
     t2 = perf_counter()
-    gen2.standard_normal(100000000)
+    gen2.standard_normal(100000)
     t3 = perf_counter()
     times.append([t2-t1,t3-t2])
 mean = np.mean(np.array(times),axis=0)
