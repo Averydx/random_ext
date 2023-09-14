@@ -1,9 +1,6 @@
-Rand.cpython-311-darwin.so
-benchmarking.py
-mem_test.py
 setup.py
-/Users/averydrennan/random_lib/src/c_extension/PCG.c
-/Users/averydrennan/random_lib/src/c_extension/rand_pyext.c
+./src/c_extension/PCG.c
+./src/c_extension/rand_pyext.c
 Rand.egg-info/PKG-INFO
 Rand.egg-info/SOURCES.txt
 Rand.egg-info/dependency_links.txt

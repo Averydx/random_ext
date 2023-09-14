@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include "numpy/arrayobject.h"
 #include "stdlib.h"
-#include <omp.h>
 #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 
 
@@ -97,10 +96,7 @@ PyObject* standard_normal(PCG *self,PyObject *args)
 
 
     double* arr = malloc(size*sizeof(double));
-    Py_BEGIN_ALLOW_THREADS
-    #pragma omp parallel shared(arr)
-    {
-    #pragma omp for 
+    Py_BEGIN_ALLOW_THREADS 
     for(size_t i = 0;i < size;i+=2)
     {
         double u,v,s;
@@ -123,7 +119,6 @@ PyObject* standard_normal(PCG *self,PyObject *args)
         arr[i] = z0;
         arr[i+1] = z1;
         }
-    }
     }
     Py_END_ALLOW_THREADS
 
