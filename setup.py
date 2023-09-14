@@ -11,4 +11,4 @@ setup(name="Rand",
       description="Module for the computation of random numbers using PCG",
       ext_modules=[module],
       include_dirs=[np.get_include()],
-      package_data={'': ['*.so', '*.pyi']})
+      package_data={'': ['*.so', '*.pyi','*.pyd']})

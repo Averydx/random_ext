@@ -5,3 +5,5 @@ Rand.egg-info/PKG-INFO
 Rand.egg-info/SOURCES.txt
 Rand.egg-info/dependency_links.txt
 Rand.egg-info/top_level.txt
+src/c_extension/PCG.c
+src/c_extension/rand_pyext.c
